@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 
 
-class Layer(ABC):
+class Network(ABC):
     @abstractmethod
-    def forward(self, x):
+    def predict(self, x):
         pass
 
     @abstractmethod
-    def backward(self, grad, lr):
+    def train(self, x, y, epochs, lr):
         pass
